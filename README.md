@@ -10,13 +10,13 @@ This repository contains the official supplementary code for:
 - [Stable Audio Open Small](https://huggingface.co/stabilityai/stable-audio-open-small)
 
 ## Running Audio Experiments
-To install requirements for audio experiments:
+1. Install requirements for audio generation:
 
 ```bash
 pip install -r code_examples/audio-requirements.txt
 ```
 
-To generate audio with custom hooks and reproduce the supplementary material:
+2. Run Gradio Demo:
 
 ```bash
 python audio-generation-demo.py
