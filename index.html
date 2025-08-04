@@ -12,6 +12,7 @@
             margin: 0 auto;
             padding: 20px;
             color: #24292f;
+            text-align: center;
         }
         
         h1, h2, h3, h4 {
@@ -45,6 +46,13 @@
             text-align: center;
             margin: 20px 0;
         }
+
+        .center-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         
         .center img {
             max-width: 100%;
@@ -67,14 +75,7 @@
             align-items: flex-start;
         }
         
-        .scroll-container img {
-            height: 400px;
-            width: auto;
-            border: 1px solid #d1d9e0;
-            border-radius: 6px;
-            flex-shrink: 0; /* Prevent compression */
-            object-fit: contain; /* Maintain aspect ratio */
-        }
+
         
         .image-caption {
             font-size: 0.9em;
@@ -225,41 +226,41 @@
         
         <h3>Block Comparison Rows</h3>
         
-        <div class="center">
+        <div class="center-flex">
             <div class="scroll-container">
-                <img src="generated_images/k_hook_block_comparison_row.png" alt="k_hook_block_comparison_row">
+                <img src="generated_images/k_hook_block_comparison_row.png"  height="400" alt="k_hook_block_comparison_row">
             </div>
-            <div class="image-caption">
+            <div class="image-caption" style="text-align: center;">
                 <strong>k_hook_block_comparison_row.png</strong><br>
                 Target blocks: 0-23 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: k, Parameter scale: 2.0, Noise scale: 0.0
             </div>
         </div>
         
-        <div class="center">
-            <div class="scroll-container">
-                <img src="generated_images/v_hook_block_comparison_row.png" alt="v_hook_block_comparison_row">
+        <div class="center-flex">
+            <div class="scroll-container" >
+                <img src="generated_images/v_hook_block_comparison_row.png"  height="400" alt="v_hook_block_comparison_row">
             </div>
-            <div class="image-caption">
+            <div class="image-caption" style="text-align: center;">
                 <strong>v_hook_block_comparison_row.png</strong><br>
                 Target blocks: 0-23 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: v, Parameter scale: 2.0, Noise scale: 0.0
             </div>
         </div>
         
-        <div class="center">
-            <div class="scroll-container">
-                <img src="generated_images/q_hook_block_comparison_row.png" alt="q_hook_block_comparison_row">
+        <div class="center-flex">
+            <div class="scroll-container" >
+                <img src="generated_images/q_hook_block_comparison_row.png" height="400" alt="q_hook_block_comparison_row">
             </div>
-            <div class="image-caption">
+            <div class="image-caption" style="text-align: center;">
                 <strong>q_hook_block_comparison_row.png</strong><br>
                 Target blocks: 0-23 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: q, Parameter scale: 2.0, Noise scale: 0.0
             </div>
         </div>
         
-        <div class="center">
+        <div class="center-flex">
             <div class="scroll-container">
-                <img src="generated_images/ff_hook_block_comparison_row.png" alt="ff_hook_block_comparison_row">
+                <img src="generated_images/ff_hook_block_comparison_row.png"  height="400" alt="ff_hook_block_comparison_row">
             </div>
-            <div class="image-caption">
+            <div class="image-caption" style="text-align: center;">
                 <strong>ff_hook_block_comparison_row.png</strong><br>
                 Target blocks: 0-23 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: ff, Parameter scale: 2.0, Noise scale: 0.0
             </div>
