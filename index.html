@@ -53,6 +53,24 @@
             border-radius: 6px;
         }
         
+        .scroll-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+            border: 1px solid #d1d9e0;
+            border-radius: 6px;
+            background: #f6f8fa;
+        }
+        
+        .scroll-container img {
+            height: 400px;
+            width: auto;
+            border: 1px solid #d1d9e0;
+            border-radius: 6px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        
         .image-caption {
             font-size: 0.9em;
             color: #656d76;
@@ -203,7 +221,9 @@
         <h3>Block Comparison Rows</h3>
         
         <div class="center">
-            <img src="generated_images/k_hook_block_comparison_row.png" width="600" alt="k_hook_block_comparison_row">
+            <div class="scroll-container">
+                <img src="generated_images/k_hook_block_comparison_row.png" alt="k_hook_block_comparison_row">
+            </div>
             <div class="image-caption">
                 <strong>k_hook_block_comparison_row.png</strong><br>
                 Target blocks: 0-23 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: k, Parameter scale: 2.0, Noise scale: 0.0
@@ -211,7 +231,9 @@
         </div>
         
         <div class="center">
-            <img src="generated_images/v_hook_block_comparison_row.png" width="600" alt="v_hook_block_comparison_row">
+            <div class="scroll-container">
+                <img src="generated_images/v_hook_block_comparison_row.png" alt="v_hook_block_comparison_row">
+            </div>
             <div class="image-caption">
                 <strong>v_hook_block_comparison_row.png</strong><br>
                 Target blocks: 0-23 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: v, Parameter scale: 2.0, Noise scale: 0.0
@@ -219,7 +241,9 @@
         </div>
         
         <div class="center">
-            <img src="generated_images/q_hook_block_comparison_row.png" width="600" alt="q_hook_block_comparison_row">
+            <div class="scroll-container">
+                <img src="generated_images/q_hook_block_comparison_row.png" alt="q_hook_block_comparison_row">
+            </div>
             <div class="image-caption">
                 <strong>q_hook_block_comparison_row.png</strong><br>
                 Target blocks: 0-23 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: q, Parameter scale: 2.0, Noise scale: 0.0
@@ -227,7 +251,9 @@
         </div>
         
         <div class="center">
-            <img src="generated_images/ff_hook_block_comparison_row.png" width="600" alt="ff_hook_block_comparison_row">
+            <div class="scroll-container">
+                <img src="generated_images/ff_hook_block_comparison_row.png" alt="ff_hook_block_comparison_row">
+            </div>
             <div class="image-caption">
                 <strong>ff_hook_block_comparison_row.png</strong><br>
                 Target blocks: 0-23 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: ff, Parameter scale: 2.0, Noise scale: 0.0
