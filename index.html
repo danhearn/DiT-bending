@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surfacing Control: Targeted Interventions in DiT Models</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #24292f;
+        }
+        
+        h1, h2, h3, h4 {
+            color: #1f2328;
+            border-bottom: 1px solid #d1d9e0;
+            padding-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        
+        h4 {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        
+        .center {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .center img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #d1d9e0;
+            border-radius: 6px;
+        }
+        
+        .image-caption {
+            font-size: 0.9em;
+            color: #656d76;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #ffffff;
+            border: 1px solid #d1d9e0;
+            border-radius: 6px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #d1d9e0;
+        }
+        
+        th {
+            background-color: #f6f8fa;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f6f8fa;
+        }
+        
+        audio {
+            width: 200px;
+            height: 32px;
+        }
+        
+        .audio-link {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #0969da;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.875em;
+        }
+        
+        .audio-link:hover {
+            background-color: #0550ae;
+        }
+        
+        code {
+            background-color: #f6f8fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        
+        pre {
+            background-color: #f6f8fa;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            border: 1px solid #d1d9e0;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+        }
+        
+        .requirements {
+            background-color: #f0f9ff;
+            border: 1px solid #0969da;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 20px 0;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Surfacing Control: Targeted Interventions in DiT Models for Creative Expression in Multiple Domains</h1>
+    
+    <p>This repository contains the official supplementary code, audio, and images for the paper:</p>
+    <p><strong>Surfacing Control: Targeted Interventions in DiT Models for Creative Expression in Multiple Domains</strong></p>
+
+    <div class="section">
+        <h2>Requirements</h2>
+        
+        <div class="requirements">
+            <h4>Audio Experiments</h4>
+            <pre><code>pip install -r code_examples/audio-requirements.txt</code></pre>
+            
+            <h4>Image Experiments</h4>
+            <pre><code>pip install -r code_examples/image-requirements.txt</code></pre>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Running Experiments</h2>
+        
+        <h3>Audio Generation</h3>
+        <p>To generate audio with custom hooks and reproduce the supplementary material:</p>
+        <pre><code>python audio-generation-demo.py</code></pre>
+        <p>in <code>code_examples/</code>. You can modify the script to use your own prompts and parameter settings.</p>
+        
+        <h3>Image Generation</h3>
+        <p>To generate images and spectrograms:</p>
+        <pre><code>python image-generation-demo.py</code></pre>
+        <p>in <code>code_examples/</code>. You can modify the script to use your own prompts and parameter settings.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contents</h2>
+        <ul>
+            <li><code>code_examples/</code> — Example scripts and demos for running and modifying the models</li>
+            <li><code>generated_audio/</code> — Example audio outputs (WAV)</li>
+            <li><code>generated_images/</code> — Example spectrograms and visualizations (PNG)</li>
+            <li><code>audio-requirements.txt</code> — Python dependencies for running the audio code</li>
+            <li><code>image-requirements.txt</code> — Python dependencies for running the image code</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Parameter Settings for Generated Images</h2>
+        
+        <h3>Combined Scaling Grids</h3>
+        
+        <div class="center">
+            <img src="generated_images/k_hook_combined_scaling_grid.png" width="400" alt="k_hook_combined_scaling_grid">
+            <div class="image-caption">
+                <strong>k_hook_combined_scaling_grid.png</strong><br>
+                Target block: 12, Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: k, Parameter scales (rows): [1.0, 0.5, 1.5, 2.5], Noise scales (columns): [0.0, 0.5, 1.0, 1.5]
+            </div>
+        </div>
+        
+        <div class="center">
+            <img src="generated_images/v_hook_combined_scaling_grid.png" width="400" alt="v_hook_combined_scaling_grid">
+            <div class="image-caption">
+                <strong>v_hook_combined_scaling_grid.png</strong><br>
+                Target block: 12, Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: v, Parameter scales (rows): [1.0, 0.5, 1.5, 2.5], Noise scales (columns): [0.0, 0.5, 1.0, 1.5]
+            </div>
+        </div>
+        
+        <div class="center">
+            <img src="generated_images/q_hook_combined_scaling_grid.png" width="400" alt="q_hook_combined_scaling_grid">
+            <div class="image-caption">
+                <strong>q_hook_combined_scaling_grid.png</strong><br>
+                Target block: 12, Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: q, Parameter scales (rows): [1.0, 0.5, 1.5, 2.5], Noise scales (columns): [0.0, 0.5, 1.0, 1.5]
+            </div>
+        </div>
+        
+        <div class="center">
+            <img src="generated_images/ff_hook_combined_scaling_grid.png" width="400" alt="ff_hook_combined_scaling_grid">
+            <div class="image-caption">
+                <strong>ff_hook_combined_scaling_grid.png</strong><br>
+                Target block: 12, Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: ff, Parameter scales (rows): [1.0, 0.5, 1.5, 2.5], Noise scales (columns): [0.0, 0.5, 1.0, 1.5]
+            </div>
+        </div>
+        
+        <div class="center">
+            <img src="generated_images/all_hooks_combined_scaling_grid.png" width="400" alt="all_hooks_combined_scaling_grid">
+            <div class="image-caption">
+                <strong>all_hooks_combined_scaling_grid.png</strong><br>
+                Target block: 12, Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameters: all hooks, Parameter scales (rows): [1.0, 0.5, 1.5, 2.5], Noise scales (columns): [0.0, 0.5, 1.0, 1.5]
+            </div>
+        </div>
+        
+        <h3>Paper Figure 2 (Hook Comparison Grid)</h3>
+        
+        <div class="center">
+            <img src="generated_images/hook_comparison.png" width="600" alt="hook_comparison">
+            <div class="image-caption">
+                <strong>hook_comparison.png</strong><br>
+                Target block: 12, Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter scale: 1.0, Noise scale: 1.5 (except first image: base), Hooks: base, k, v, q, ff, all (left to right)
+            </div>
+        </div>
+        
+        <h3>Block Comparison Rows</h3>
+        
+        <div class="center">
+            <img src="generated_images/k_hook_block_comparison_row.png" width="600" alt="k_hook_block_comparison_row">
+            <div class="image-caption">
+                <strong>k_hook_block_comparison_row.png</strong><br>
+                Target blocks: 4, 8, 12, 18 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: k, Parameter scale: 2.0, Noise scale: 0.0
+            </div>
+        </div>
+        
+        <div class="center">
+            <img src="generated_images/v_hook_block_comparison_row.png" width="600" alt="v_hook_block_comparison_row">
+            <div class="image-caption">
+                <strong>v_hook_block_comparison_row.png</strong><br>
+                Target blocks: 4, 8, 12, 18 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: v, Parameter scale: 2.0, Noise scale: 0.0
+            </div>
+        </div>
+        
+        <div class="center">
+            <img src="generated_images/q_hook_block_comparison_row.png" width="600" alt="q_hook_block_comparison_row">
+            <div class="image-caption">
+                <strong>q_hook_block_comparison_row.png</strong><br>
+                Target blocks: 4, 8, 12, 18 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: q, Parameter scale: 2.0, Noise scale: 0.0
+            </div>
+        </div>
+        
+        <div class="center">
+            <img src="generated_images/ff_hook_block_comparison_row.png" width="600" alt="ff_hook_block_comparison_row">
+            <div class="image-caption">
+                <strong>ff_hook_block_comparison_row.png</strong><br>
+                Target blocks: 4, 8, 12, 18 (left to right), Prompt: "A portrait photograph of a person smiling", Guidance scale: 4.0, Steps: 20, Parameter: ff, Parameter scale: 2.0, Noise scale: 0.0
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Audio Examples</h2>
+        <p>Below are audio grids for each parameter sweep (by_param) and all-hooks combos. Each cell contains an audio player for the corresponding parameter combination.</p>
+        
+        <h3>Parameter Sweeps (by_param)</h3>
+        
+        <h4>self_attn</h4>
+        <table>
+            <tr>
+                <th></th><th>noise 0.0</th><th>noise 0.5</th><th>noise 1.0</th><th>noise 1.5</th>
+            </tr>
+            <tr>
+                <td>param 0.5</td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param0.5_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param0.5_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param0.5_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param0.5_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 1.0</td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param1.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param1.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param1.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param1.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 2.0</td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param2.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param2.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param2.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param2.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 10.0</td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param10.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param10.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param10.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/self_attn/by_param/block8_param10.0_noise1.5.wav"></audio></td>
+            </tr>
+        </table>
+        
+        <h4>cross_attn</h4>
+        <table>
+            <tr>
+                <th></th><th>noise 0.0</th><th>noise 0.5</th><th>noise 1.0</th><th>noise 1.5</th>
+            </tr>
+            <tr>
+                <td>param 0.5</td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param0.5_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param0.5_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param0.5_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param0.5_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 1.0</td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param1.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param1.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param1.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param1.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 2.0</td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param2.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param2.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param2.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param2.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 10.0</td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param10.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param10.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param10.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_attn/by_param/block8_param10.0_noise1.5.wav"></audio></td>
+            </tr>
+        </table>
+        
+        <h4>cross_q</h4>
+        <table>
+            <tr>
+                <th></th><th>noise 0.0</th><th>noise 0.5</th><th>noise 1.0</th><th>noise 1.5</th>
+            </tr>
+            <tr>
+                <td>param 0.5</td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param0.5_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param0.5_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param0.5_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param0.5_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 1.0</td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param1.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param1.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param1.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param1.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 2.0</td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param2.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param2.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param2.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param2.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 10.0</td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param10.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param10.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param10.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_q/by_param/block8_param10.0_noise1.5.wav"></audio></td>
+            </tr>
+        </table>
+        
+        <h4>cross_kv</h4>
+        <table>
+            <tr>
+                <th></th><th>noise 0.0</th><th>noise 0.5</th><th>noise 1.0</th><th>noise 1.5</th>
+            </tr>
+            <tr>
+                <td>param 0.5</td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param0.5_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param0.5_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param0.5_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param0.5_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 1.0</td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param1.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param1.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param1.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param1.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 2.0</td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param2.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param2.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param2.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param2.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 4.0</td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param4.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param4.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param4.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/cross_kv/by_param/block8_param4.0_noise1.5.wav"></audio></td>
+            </tr>
+        </table>
+        
+        <h4>ff</h4>
+        <table>
+            <tr>
+                <th></th><th>noise 0.0</th><th>noise 0.5</th><th>noise 1.0</th><th>noise 1.5</th>
+            </tr>
+            <tr>
+                <td>param 0.5</td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param0.5_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param0.5_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param0.5_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param0.5_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 1.0</td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param1.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param1.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param1.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param1.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 2.0</td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param2.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param2.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param2.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param2.0_noise1.5.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>param 3.0</td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param3.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param3.0_noise0.5.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param3.0_noise1.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/ff/by_param/block8_param3.0_noise1.5.wav"></audio></td>
+            </tr>
+        </table>
+        
+        <h3>All-Hooks Combo</h3>
+        <table>
+            <tr>
+                <th>param \ noise</th><th>0.0</th><th>1.0</th>
+            </tr>
+            <tr>
+                <td>1.0</td>
+                <td><audio controls src="generated_audio/combos/allhooks_block8_param1.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/combos/allhooks_block8_param1.0_noise1.0.wav"></audio></td>
+            </tr>
+            <tr>
+                <td>2.0</td>
+                <td><audio controls src="generated_audio/combos/allhooks_block8_param2.0_noise0.0.wav"></audio></td>
+                <td><audio controls src="generated_audio/combos/allhooks_block8_param2.0_noise1.0.wav"></audio></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Pre-trained Models</h2>
+        <ul>
+            <li>Stable Diffusion 3.0 Medium</li>
+            <li>Stable Audio Small</li>
+        </ul>
+    </div>
+</body>
+</html>

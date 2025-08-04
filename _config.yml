@@ -1,0 +1,17 @@
+title: "Surfacing Control: Targeted Interventions in DiT Models"
+description: "Official supplementary materials for the paper on targeted interventions in DiT models for creative expression in multiple domains"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files
+exclude:
+  - code_examples/
+  - .gitignore
+  - README.md

@@ -4,6 +4,17 @@ This repository contains the official supplementary code, audio, and images for 
 
 **Surfacing Control: Targeted Interventions in DiT Models for Creative Expression in Multiple Domains**
 
+## Examples
+
+Visit our **[GitHub Pages site](https://danhearn.github.io/DiT-bending/)** to explore the interactive audio players and full supplementary materials with proper audio playback support.
+
+## Quick Links
+
+- [Supplementary Materials](https://danhearn.github.io/DiT-bending/) (GitHub Pages)
+- [Audio Examples](https://danhearn.github.io/DiT-bending/#audio-examples)
+- [Generated Images](https://danhearn.github.io/DiT-bending/#parameter-settings-for-generated-images)
+
+
 
 
 ## Requirements
@@ -174,31 +185,31 @@ Below are audio grids for each parameter sweep (by_param) and all-hooks combos. 
   </tr>
   <tr>
     <td>param 0.5</td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param0.5_noise0.0.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param0.5_noise0.5.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param0.5_noise1.0.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param0.5_noise1.5.wav"></audio></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param0.5_noise0.0.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param0.5_noise0.5.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param0.5_noise1.0.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param0.5_noise1.5.wav">🔊 Play</a></td>
   </tr>
   <tr>
     <td>param 1.0</td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param1.0_noise0.0.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param1.0_noise0.5.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param1.0_noise1.0.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param1.0_noise1.5.wav"></audio></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param1.0_noise0.0.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param1.0_noise0.5.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param1.0_noise1.0.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param1.0_noise1.5.wav">🔊 Play</a></td>
   </tr>
   <tr>
     <td>param 2.0</td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param2.0_noise0.0.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param2.0_noise0.5.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param2.0_noise1.0.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param2.0_noise1.5.wav"></audio></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param2.0_noise0.0.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param2.0_noise0.5.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param2.0_noise1.0.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param2.0_noise1.5.wav">🔊 Play</a></td>
   </tr>
   <tr>
     <td>param 10.0</td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param10.0_noise0.0.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param10.0_noise0.5.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param10.0_noise1.0.wav"></audio></td>
-    <td><audio controls src="generated_audio/self_attn/by_param/block8_param10.0_noise1.5.wav"></audio></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param10.0_noise0.0.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param10.0_noise0.5.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param10.0_noise1.0.wav">🔊 Play</a></td>
+    <td><a href="generated_audio/self_attn/by_param/block8_param10.0_noise1.5.wav">🔊 Play</a></td>
   </tr>
 </table>
 
